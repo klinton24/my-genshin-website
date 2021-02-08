@@ -33,13 +33,17 @@ header {
   box-sizing: border-box;
 }
 
+h1 {
+  text-transform: capitalize;
+}
+
 @media (max-width: 825px) and (min-width: 525px) {
   .contentWrap > img {
     width: 50%;
   }
 }
 
-@media (max-width: 525px){
+@media (max-width: 525px) {
   .contentWrap > img {
     width: 100%;
   }
