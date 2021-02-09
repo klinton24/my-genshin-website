@@ -37,7 +37,6 @@ h1 {
   text-transform: capitalize;
 }
 
-<<<<<<< HEAD
 .box {
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -52,8 +51,6 @@ h1 {
   outline: none;
 }
 
-=======
->>>>>>> d76a61a199387a5b16a7bc188cc9e42e88ff9003
 @media (max-width: 825px) and (min-width: 525px) {
   .contentWrap > img {
     width: 50%;
