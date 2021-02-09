@@ -1,11 +1,12 @@
 body {
   background-color: #777;
   color: #fff;
-  font-family: "Montserrat";
+  font-family: Montserrat, sans-serif;
 }
 
 .dropbtn {
-  background-color: #4caf50;
+  background-color: #d6a355;
+  border-radius: 1px;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -42,5 +43,5 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #bc6932;
 }
