@@ -1,0 +1,16 @@
+[{
+    "cName" : "Zhongli",
+    "main Stat" : "HP",
+    "substat #1" : "Attack %",
+    "substat #2" : "HP",
+    "substat #3" : "Energy Recharge %",
+    "substat #4" : "Insert Data Later",
+    "comments" : "Zhongli Comments, Which Artifacts I like, and hate"},
+{
+    "cName" : "Diona",
+    "main Stat" : "HP",
+    "substat #1" : "Energy Recharge",
+    "substat #2" : "HP",
+    "substat #3" : "Attack %?",
+    "substat #4" : "Insert Data Later",
+    "comments" : "Diona Comments, Which Artifacts I like, and hate"}]

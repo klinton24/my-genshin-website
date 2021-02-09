@@ -1,8 +1,19 @@
 const charName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1).slice(0, -5);
 
+
 function goBack() {
     window.history.back();
-  }
+}
+
+fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(data => {
+  for(var i = 0; i < data.length; i++) {
+    if(charData.name === charName){
+      console.log(data);
+}}});
 
 document.getElementById("app").innerHTML = `
 <button class="backBtn" onclick="goBack()">Go Back</button>
