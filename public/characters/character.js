@@ -1,7 +1,12 @@
 const charName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1).slice(0, -5);
 
+function goBack() {
+    window.history.back();
+  }
+
 document.getElementById("app").innerHTML = `
-<header>
+<button class="backBtn" onclick="goBack()">Go Back</button>
+    <header>
     <h1>${charName}</h1>
     <img class="profilePic" src="../images/${charName}/${charName}-profile.png" />
     </header>
@@ -14,10 +19,10 @@ document.getElementById("app").innerHTML = `
     <p>HP</p>
     <p>Energy Recharge %</p>
     </div>    
-    <img class ="artifactPic" src="../images/${charName}/${charName}-flower.png" />
-    <img class ="artifactPic" src="../images/${charName}/${charName}-plume.png" />
-    <img class ="artifactPic" src="../images/${charName}/${charName}-sands.png" />
-    <img class ="artifactPic" src="../images/${charName}/${charName}-goblet.png" />
-    <img class ="artifactPic" src="../images/${charName}/${charName}-circlet.png" />
+    <img class ="artifactPic box" src="../images/${charName}/${charName}-flower.png" />
+    <img class ="artifactPic box" src="../images/${charName}/${charName}-plume.png" />
+    <img class ="artifactPic box" src="../images/${charName}/${charName}-sands.png" />
+    <img class ="artifactPic box" src="../images/${charName}/${charName}-goblet.png" />
+    <img class ="artifactPic box" src="../images/${charName}/${charName}-circlet.png" />
     </div>
 `;
