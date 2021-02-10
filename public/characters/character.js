@@ -1,5 +1,14 @@
 const charName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1).slice(0, -5);
 
+/*
+function charMainStat() {
+for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].mainStat);
+    }}
+}
+*/
+
 
 function goBack() {
     window.history.back();
@@ -11,9 +20,9 @@ fetch("./charData.json")
 })
 .then(data => {
   for(var i = 0; i < data.length; i++) {
-    if(charData.name === charName){
-      console.log(data);
-}}});
+    if(data[i].cName == charName){
+      console.log(data[i].mainStat);
+    }}});
 
 document.getElementById("app").innerHTML = `
 <button class="backBtn" onclick="goBack()">Go Back</button>
