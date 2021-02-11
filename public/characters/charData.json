@@ -1,5 +1,5 @@
 [{
-    "cName" : "Zhongli",
+    "cName" : "zhongli",
     "mainStat" : "HP",
     "substat1" : "Attack %",
     "substat2" : "HP",
@@ -7,7 +7,7 @@
     "substat4" : "Insert Data Later",
     "comments" : "Zhongli Comments, Which Artifacts I like, and hate"},
 {
-    "cName" : "Diona",
+    "cName" : "diona",
     "mainStat" : "HP",
     "substat1" : "Energy Recharge - good job boy-o",
     "substat2" : "HP",

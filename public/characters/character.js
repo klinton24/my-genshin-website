@@ -13,16 +13,38 @@ for(var i = 0; i < charData.length; i++) {
 function goBack() {
     window.history.back();
 }
-
-fetch("./charData.json")
+/*
+const charData = fetch("./charData.json")
 .then(response => {
    return response.json();
 })
-.then(data => {
-  for(var i = 0; i < data.length; i++) {
-    if(data[i].cName == charName){
-      console.log(data[i].mainStat);
+
+console.log(charData);
+//console.log(charData.length); //undefined
+//console.log(charData[1].cName); //breaks it cannot read property 'cName of undefined'
+console.log(charName);
+
+
+function charMainStat() {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].mainStat);
+    }}};
+    charMainStat();
+*/
+
+function charMainStat()  {fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(charData => {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].mainStat);
     }}});
+  }
+
+  charMainStat();
 
 document.getElementById("app").innerHTML = `
 <button class="backBtn" onclick="goBack()">Go Back</button>
