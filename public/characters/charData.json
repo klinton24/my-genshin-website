@@ -8,9 +8,18 @@
     "comments" : "Zhongli Comments, Which Artifacts I like, and hate"},
 {
     "cName" : "diona",
-    "mainStat" : "HP",
-    "substat1" : "Energy Recharge - good job boy-o",
-    "substat2" : "HP",
-    "substat3" : "Attack %?",
-    "substat4" : "Insert Data Later",
-    "comments" : "Diona Comments, Which Artifacts I like, and hate"}]
+    "mainStat" : "dHP",
+    "substat1" : "dEnergy Recharge - good job boy-o",
+    "substat2" : "dHP",
+    "substat3" : "dAttack %?",
+    "substat4" : "dInsert Data Later",
+    "comments" : "dDiona Comments, Which Artifacts I like, and hate"},
+{
+    "cName" : "xinyan",
+    "mainStat" : "xHP",
+    "substat1" : "xEnergy Recharge - good job boy-o",
+    "substat2" : "xHP",
+    "substat3" : "xAttack %?",
+    "substat4" : "xInsert Data Later",
+    "comments" : "xDiona Comments, Which Artifacts I like, and hate"}
+]

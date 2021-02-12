@@ -40,11 +40,78 @@ function charMainStat()  {fetch("./charData.json")
 .then(charData => {
   for(var i = 0; i < charData.length; i++) {
     if(charData[i].cName == charName){
-      console.log(charData[i].mainStat);
+      return (charData[i].mainStat);
     }}});
-  }
+}
 
-  charMainStat();
+charMainStat();
+
+function charSubStat1()  {fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(charData => {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].substat1);
+    }}});
+}
+
+charSubStat1();
+
+function charSubStat2()  {fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(charData => {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].substat2);
+    }}});
+}
+
+charSubStat2();
+
+function charSubStat3()  {fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(charData => {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].substat3);
+    }}});
+}
+
+charSubStat3();
+
+function charSubStat4()  {fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(charData => {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].substat4);
+    }}});
+}
+
+charSubStat4();
+
+function charComments()  {fetch("./charData.json")
+.then(response => {
+   return response.json();
+})
+.then(charData => {
+  for(var i = 0; i < charData.length; i++) {
+    if(charData[i].cName == charName){
+      console.log(charData[i].comments);
+    }}});
+}
+
+charComments();
+
+
 
 document.getElementById("app").innerHTML = `
 <button class="backBtn" onclick="goBack()">Go Back</button>
@@ -56,10 +123,12 @@ document.getElementById("app").innerHTML = `
     <div class="informationWrap">
     <br><br>
     <h2>Stats to prioritize:</h2>
-    <p>Main Stat: HP %</p>
-    <p>Attack %</p>
-    <p>HP</p>
-    <p>Energy Recharge %</p>
+    <p>Main Stat: ${charMainStat()}</p>
+    <p>Sub Stat #1: ${charSubStat1()}</p>
+    <p>Sub Stat #2: ${charSubStat2()}</p>
+    <p>Sub Stat #3: ${charSubStat3()}</p>
+    <p>Sub Stat #4: ${charSubStat4()}</p>
+    <p>General Comments: ${charComments()} </p>
     </div>    
     <img class ="artifactPic box" src="../images/${charName}/${charName}-flower.png" />
     <img class ="artifactPic box" src="../images/${charName}/${charName}-plume.png" />
