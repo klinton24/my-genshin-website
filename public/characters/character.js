@@ -1,116 +1,54 @@
 const charName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1).slice(0, -5);
-
-/*
-function charMainStat() {
-for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      console.log(charData[i].mainStat);
-    }}
-}
-*/
-
+let charMainStat;
+let charSubStat1;
+let charSubStat2;
+let charSubStat3;
+let charSubStat4;
+let charComments;
 
 function goBack() {
     window.history.back();
 }
-/*
-const charData = fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
 
-console.log(charData);
-//console.log(charData.length); //undefined
-//console.log(charData[1].cName); //breaks it cannot read property 'cName of undefined'
-console.log(charName);
+async function getCharData() {
+  let response = await fetch("./charData.json");
+  let data = await response.json();
+  return data;
+}
 
-
-function charMainStat() {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
+getCharData().then((charData) => {
+  for (var i = 0; i < charData.length; i++) {
+    if (charData[i].cName == "diona") {
       console.log(charData[i].mainStat);
-    }}};
-    charMainStat();
+      // instead of console.log you would do what you want with the data besides returning
+      charMainStat = charData[i].mainStat;
+      console.log(charMainStat); // This returns the value I want
+    }
+  }
+});
+console.log(charMainStat); //This returns undefined? seems like a scope problem that i can't fix?
+
+/*
+function charMainStat() {
+  let newValue = ''
+  fetch("./charData.json")
+  .then(response => {
+      return response.json();
+  })
+  .then(charData => {
+      for (var i = 0; i < charData.length; i++) {
+          if (charData[i].cName == charName) {
+              newValue = charData[i].mainStat;
+              console.log(newValue);
+          }
+      }
+  });
+  console.log(newValue);
+  return newValue;
+}
+
+console.log(charMainStat());
 */
-
-function charMainStat()  {fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
-.then(charData => {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      return (charData[i].mainStat);
-    }}});
-}
-
-charMainStat();
-
-function charSubStat1()  {fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
-.then(charData => {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      console.log(charData[i].substat1);
-    }}});
-}
-
-charSubStat1();
-
-function charSubStat2()  {fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
-.then(charData => {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      console.log(charData[i].substat2);
-    }}});
-}
-
-charSubStat2();
-
-function charSubStat3()  {fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
-.then(charData => {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      console.log(charData[i].substat3);
-    }}});
-}
-
-charSubStat3();
-
-function charSubStat4()  {fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
-.then(charData => {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      console.log(charData[i].substat4);
-    }}});
-}
-
-charSubStat4();
-
-function charComments()  {fetch("./charData.json")
-.then(response => {
-   return response.json();
-})
-.then(charData => {
-  for(var i = 0; i < charData.length; i++) {
-    if(charData[i].cName == charName){
-      console.log(charData[i].comments);
-    }}});
-}
-
-charComments();
-
 
 
 document.getElementById("app").innerHTML = `
@@ -123,12 +61,7 @@ document.getElementById("app").innerHTML = `
     <div class="informationWrap">
     <br><br>
     <h2>Stats to prioritize:</h2>
-    <p>Main Stat: ${charMainStat()}</p>
-    <p>Sub Stat #1: ${charSubStat1()}</p>
-    <p>Sub Stat #2: ${charSubStat2()}</p>
-    <p>Sub Stat #3: ${charSubStat3()}</p>
-    <p>Sub Stat #4: ${charSubStat4()}</p>
-    <p>General Comments: ${charComments()} </p>
+    <p>Main Stat: ${charMainStat}</p>
     </div>    
     <img class ="artifactPic box" src="../images/${charName}/${charName}-flower.png" />
     <img class ="artifactPic box" src="../images/${charName}/${charName}-plume.png" />
