@@ -17,11 +17,11 @@ function goBack() {
   return data;
 });
 
-(async function wtf()  {
+(async () =>  {
   const charData = await getCharData();
   let charMainStat;
   for (var i = 0; i < charData.length; i++) {
-      if (charData[i].cName == "diona") {
+      if (charData[i].cName == charName) {
         console.log(charData[i].mainStat);
         // instead of console.log you would do what you want with the data besides returning
         charMainStat = charData[i].mainStat;
@@ -29,7 +29,7 @@ function goBack() {
       }
   }
   console.log(charMainStat); //This returns undefined?
-});
+})();
 
 
 document.getElementById("app").innerHTML = `
